@@ -7,7 +7,9 @@
 		<PageHeader />
 	</div>
 	<div class="app__content">
-		<slot></slot>
+		<div class="stuff">
+			<slot></slot>
+		</div>
 	</div>
 </div>
 
@@ -16,17 +18,22 @@
 	@import '../variables.css';
 
 	.app {
-		height: 100%;
 		padding: 0;
 		margin: 0;
 		color: var(--text-color);
+		height: 100vh;
+		overflow: hidden;
 	}
 
 	.app__content {
+		overflow-y: auto;
+		height: 100%;
+	}
+
+	.stuff {
 		display: flex;
 		justify-content: center;
 		max-width: 1000px;
 		margin: 24px auto;
-		color: var(--text-color);
 	}
 </style>
