@@ -1,5 +1,5 @@
 <script>
-	import { Popover, PopoverTrigger, PopoverContent } from 'kiwi-nl';
+	import { Popover, PopoverTrigger, PopoverContent, Button } from 'kiwi-nl';
 	import { createEventDispatcher } from 'svelte';
 
 	export let selectedTimeFrame = 'Today';

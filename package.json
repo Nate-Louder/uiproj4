@@ -19,6 +19,7 @@
 		"vite": "^5.0.3"
 	},
 	"dependencies": {
+		"chart.js": "^4.4.7",
 		"kiwi-nl": "^0.0.5",
 		"scss": "^0.2.4"
 	}
