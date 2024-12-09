@@ -3,8 +3,13 @@
     --color-primary-dark: #178f7f !important;
     --color-primary-light: #83f1e3 !important;
 
+    --color-surface: #000000 !important;
     --surface-color: #0c0c0c;
     --surface-light-color: #000000;
 
     --text-color: #fff;
+    --color-text-dark: #fff !important;
+    --color-text: #fff !important;
+    --color-text-primary: #fff !important;
+    --color-text-light: #fff !important;
 }

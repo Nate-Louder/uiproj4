@@ -1,5 +1,8 @@
 <script>
-	import { Button } from 'kiwi-nl';
+	import { Button, TextInput } from 'kiwi-nl';
+	import Modal from '../Modal/Modal.svelte';
+
+	let showModal = $state(false);
 </script>
 
 <div class="page-header">
@@ -8,10 +11,18 @@
 		<Button type="secondary" href="https://www.ncpgambling.org/help-treatment/" target="_blank">
 			<div>Get Help</div>
 		</Button>
-		<Button>
+		<Button on:click={() => (showModal = true)}>
 			<div>Add Betting App</div>
 		</Button>
 	</div>
+	<Modal bind:showModal>
+		<h2>Add A Betting App</h2>
+		<div class="modal-contents">
+			<TextInput label="App URL" />
+			<TextInput label="App Username" />
+			<TextInput label="App Password" />
+		</div>
+	</Modal>
 </div>
 
 <style lang="scss">
@@ -25,6 +36,16 @@
 		color: var(--text-color);
 		padding: 0 16px;
 		user-select: none;
+	}
+
+	h2 {
+		color: white;
+	}
+
+	.modal-contents {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
 	}
 
 	.buttons {

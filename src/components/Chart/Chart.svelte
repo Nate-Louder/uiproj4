@@ -51,7 +51,7 @@
 			responsive: true,
 			plugins: {
 				legend: { display: false }, // Removed legend
-				title: { display: true, text: 'Monthly Money Loss Over Time', color: 'white' } // White chart title
+				title: { display: true, text: 'Monthly Money Gains Over Time', color: 'white' } // White chart title
 			},
 			scales: {
 				x: {
@@ -64,7 +64,10 @@
 				},
 				y: {
 					ticks: {
-						color: 'white'
+						color: 'white',
+						callback: function (value) {
+							return `$${value}`;
+						}
 					},
 					grid: {
 						color: 'rgba(255, 255, 255, 0.1)'
